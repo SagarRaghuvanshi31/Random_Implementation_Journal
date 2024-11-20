@@ -1,7 +1,7 @@
 # Random Choice Picker Application - Docker Implementation
 
 ## Overview
-This document outlines the steps I followed to containerize the **Random Choice Picker** application using Docker and serve it with Nginx. The application is successfully built, run in a Docker container, and accessible via a web browser.
+This document outlines the steps I followed to containerize the Random Choice Picker application using Docker and serve it with Nginx. The application is successfully built, run in a Docker container, and accessible via a web browser.
 
 ## Table of Contents
 1. [Objective](#objective)
@@ -14,15 +14,15 @@ This document outlines the steps I followed to containerize the **Random Choice 
 ---
 
 ## Objective
-The objective of this implementation is to containerize the **Random Choice Picker** application using Docker and serve it through Nginx. This approach ensures that the application can be deployed consistently in any environment and accessed via a browser.
+The objective of this implementation is to containerize the Random Choice Picker** application using Docker and serve it through Nginx. This approach ensures that the application can be deployed consistently in any environment and accessed via a browser.
 
 ---
 
 ## Machine Information
 - **Operating System**: Ubuntu 22.04 LTS
-- **Docker Version**: 20.10.8
-- **Nginx Version**: 1.21.3
-- **CPU**: Intel Core i5-8250U
+- **Docker Version**: 27.3.1
+- **Nginx Version**: nginx/1.18.0 (Ubuntu)
+- **CPU**: Ryzen 5 5500U
 - **RAM**: 8GB
 
 ---
@@ -47,8 +47,13 @@ The objective of this implementation is to containerize the **Random Choice Pick
     # Use Nginx as the base image
     FROM nginx:alpine
 
-    # Copy project files to Nginx's HTML directory
-    COPY . /usr/share/nginx/html
+    # Copy the HTML, CSS, and JS files to the Nginx HTML directory
+
+    COPY index.html /usr/share/nginx/html/
+
+    COPY style.css /usr/share/nginx/html/
+
+    COPY script.js /usr/share/nginx/html/
 
     # Expose port 80 for the Nginx server
     EXPOSE 80
@@ -136,11 +141,6 @@ The objective of this implementation is to containerize the **Random Choice Pick
 ---
 
 ## Conclusion
-| **Step**                         | **Outcome** |
-|----------------------------------|-------------|
-| **Creating the Dockerfile**      | Successfully created the Dockerfile to containerize the application using Nginx. |
-| **Building the Docker Image**    | Docker image `randomchoicepicker` was successfully created. |
-| **Running the Docker Container** | Container is running and accessible at `http://localhost:8086`. |
-| **Checking Docker Images and Processes** | Docker images and processes were verified, confirming the container is running Nginx properly. |
+
 
 **Conclusion**: The Random Choice Picker application has been successfully containerized using Docker and served using Nginx. The setup is working as expected, and the application is accessible via the browser. This implementation ensures easy deployment and scalability of the application in the future.
