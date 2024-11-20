@@ -1,16 +1,16 @@
 # Random Choice Picker - Docker Implementation
 
 ## Overview
-This document outlines the process and results of containerizing the **Random Choice Picker** application using Docker and serving it with Nginx. The application was successfully built, run in a Docker container, and made accessible via a web browser.
+This document outlines the process and results of containerizing the Random Choice Picker application using Docker and serving it with Nginx. The application was successfully built, run in a Docker container, and made accessible via a web browser.
 
 ---
 
 ## Objective
 The goal of this project was to:
-- **Containerize** the Random Choice Picker application using Docker.
-- **Serve** the application using Nginx as the web server inside a Docker container.
-- Make the application **accessible** from a web browser at `http://localhost:8086`.
-- **Verify** the functionality by checking Docker processes and image details.
+- Containerize the Random Choice Picker application using Docker.
+- Serve the application using Nginx as the web server inside a Docker container.
+- Make the application accessible from a web browser at `http://localhost:8086`.
+- Verify the functionality by checking Docker processes and image details.
 
 ---
 
@@ -26,7 +26,7 @@ We aimed to achieve the following:
 ## What We Achieved
 We successfully completed the following tasks:
 
-1. **Built a Docker image** for the Random Choice Picker application:
+1. **Built a Docker image for the Random Choice Picker application**:
     - The image was created using a `Dockerfile` that uses Nginx as a base image and copies the project files to the appropriate directory for serving.
     - The image was tagged as `randomchoicepicker` and was successfully built.
 
@@ -45,17 +45,7 @@ We successfully completed the following tasks:
 ---
 
 ## Conclusion
-We have successfully containerized the **Random Choice Picker** application using Docker and Nginx. The application is accessible in a browser at `http://localhost:8086`, and the container is running as expected. This approach ensures that the application can be easily deployed in any environment with minimal configuration, providing a scalable and reproducible setup for the future.
+We have successfully containerized the Random Choice Picker application using Docker and Nginx. The application is accessible in a browser at `http://localhost:8086`, and the container is running as expected. This approach ensures that the application can be easily deployed in any environment with minimal configuration, providing a scalable and reproducible setup for the future.
 
 ---
 
-## Docker Image and Running Container Verification
-
-| **Step**                         | **Outcome** |
-|----------------------------------|-------------|
-| **Creating the Dockerfile**      | Successfully created the Dockerfile to containerize the application using Nginx. |
-| **Building the Docker Image**    | Docker image `randomchoicepicker` was successfully created. |
-| **Running the Docker Container** | Container is running and accessible at `http://localhost:8086`. |
-| **Checking Docker Images and Processes** | Docker images and processes were verified, confirming the container is running Nginx properly. |
-
----
